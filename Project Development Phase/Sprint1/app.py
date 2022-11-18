@@ -1,12 +1,21 @@
-from flask import Flask
-from flask import render_template
+from flask import Flask, render_template
+import requests
 
 app = Flask(__name__)
 
-
 @app.route('/')
-def signin_form():
-    return render_template('signin.html')
+def index():
+    url='https://newsapi.org/v2/top-headlines?country=in&apiKey=e7f35f5c970b482f828551bb8ef90f5d'
+    r=requests.get(url).json()
+    cases={
+        'articles' : r['articles']
+    }
 
-if __name__ == "__main__":
+    return render_template("index.html",case = cases)
+@app.route('/login')
+def login():
+    error=1
+    return render_template("login.html")
+if __name__ == '__main__':
     app.run(debug=True)
+   
