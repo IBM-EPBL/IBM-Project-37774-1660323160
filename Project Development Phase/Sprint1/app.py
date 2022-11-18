@@ -11,7 +11,7 @@ def index():
         'articles' : r['articles']
     }
 
-    return render_template("index.html",case = cases)
+    return render_template("login.html",case = cases)
 @app.route('/login')
 def login():
     error=1
