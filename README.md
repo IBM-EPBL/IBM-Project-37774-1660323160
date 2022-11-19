@@ -3,7 +3,7 @@ News Tracker Application
 
 Sprint 1 - Home Page
 
-Sprint 2 - Login Page (if already regitered)
+Sprint 2 - Login Page (if already registered)
 
 Sprint 3 - Register Page
 
